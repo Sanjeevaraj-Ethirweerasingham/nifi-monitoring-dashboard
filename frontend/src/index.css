@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scrollbar-thumb: #d1d5db;
+    --scrollbar-track: transparent;
+  }
+  .dark {
+    --scrollbar-thumb: #374151;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 3px;
+  }
+}
